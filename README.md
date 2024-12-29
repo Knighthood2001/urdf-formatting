@@ -1,4 +1,4 @@
-# urdf-formatting README
+# urdf-formatting说明
 
 这是`urdf-formatting`的说明文档。
 这个插件是用来针对solidworks导出成urdf时候，使用sw2urdf插件生成的urdf文件，同一标签内容跨行的现象。

@@ -1,0 +1,64 @@
+{
+  "name": "urdf-formatting",
+  "displayName": "urdf-formatting",
+  "description": "将solidworks中sw2urdf插件导出的urdf文件进行格式化",
+  "version": "0.0.1",
+  "publisher": "2109695291",
+  "engines": {
+    "vscode": "^1.10.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+      "onCommand:urdfFormatting"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "urdfFormatting",
+        "title": "urdfFormatting"
+      }
+    ],
+    "keybindings": [
+      {
+          "command": "urdfFormatting",
+          "key": "ctrl+shift+f",
+          "mac": "cmd+shift+f",
+          "linux": "ctrl+shift+f",
+          "when": "resourceLangId=='xml' && editorTextFocus && editorTextFocus && !editorReadonly"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+          {
+              "when": "editorLangId == xml",
+              "command": "urdfFormatting",
+              "group": "1_modification"
+          }
+      ]
+  }
+  },
+  "keywords": [
+    "urdf",
+    "solidworks",
+    "sw2urdf",
+    "urdf-format",
+    "urdf-beautify"
+  ],
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test",
+    "pub": "vsce publish patch"
+  },
+
+  "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "eslint": "^3.6.0",
+    "mocha": "^2.3.3",
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0"
+  }
+}

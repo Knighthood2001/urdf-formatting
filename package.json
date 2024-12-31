@@ -2,8 +2,16 @@
   "name": "urdf-formatting",
   "displayName": "urdf-formatting",
   "description": "将solidworks中sw2urdf插件导出的urdf文件进行格式化",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "2109695291",
+  "icon": "source/icon.png",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/Knighthood2001/urdf-formatting"
+  },
+  "bugs": {
+      "url": "https://github.com/Knighthood2001/urdf-formatting/issues"
+  },
   "engines": {
     "vscode": "^1.10.0"
   },

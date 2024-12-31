@@ -3,7 +3,7 @@
   "displayName": "urdf-formatting",
   "description": "将solidworks中sw2urdf插件导出的urdf文件进行格式化",
   "version": "0.0.2",
-  "publisher": "2109695291",
+  "publisher": "knighthood2001",
   "icon": "source/icon.png",
   "repository": {
       "type": "git",

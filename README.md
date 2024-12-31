@@ -1,4 +1,4 @@
-# urdf-formatting说明
+# `urdf-formatting`插件说明
 
 这是`urdf-formatting`的说明文档。
 这个插件是用来针对solidworks导出成urdf时候，使用`sw2urdf`插件生成的urdf文件，同一标签内容跨行的现象。
@@ -24,7 +24,9 @@ name="base_link">
 </inertial>
 </link>
 ```  
+
 经过格式化，同一标签的内容，将不会跨行。
+
 ```xml
 <link name="base_link">
   <inertial>
@@ -34,6 +36,7 @@ name="base_link">
   </inertial>
 </link>
 ```
+
 原本2000行的urdf文件，经过格式化后，最后可以缩到1100行左右。大大减少了文件行数。
 
 
@@ -49,18 +52,26 @@ name="base_link">
 
 ## 如何使用
 1. 注意，要使用这款插件，首先确定你要格式化的文件的语言模式是XML，否则，右键不会出现`urdfFormatting`选项。
-![确保文件的语言模式是XML](image.png)
-安装好这个插件后，在urdf文件中右键点击，选择`urdfFormatting`即可。
-![右键点击](image-1.png)
 
-![格式化了](image-2.png)
-复杂一点的
+![确保文件的语言模式是XML](source/image.png)
+
+安装好这个插件后，在urdf文件中右键点击，选择`urdfFormatting`即可。
 
 - 格式化前
-![alt text](image-3.png)
+![右键点击](source/image-1.png)
 
 - 格式化后
-![alt text](image-4.png)
+![格式化了](source/image-2.png)
+
+**复杂一点的**
+
+- 格式化前
+![alt text](source/image-3.png)
+
+- 格式化后
+![alt text](source/image-4.png)
+
+特别要说明的一点是，如果你使用这个格式化插件后，所有内容都在同一行中，请确保你的行尾序列是`CRLF`而不是`LF`。而这个行尾序列的选项在文件语言模式旁边。
 
 ### v0.0.1
 
@@ -74,7 +85,7 @@ name="base_link">
 2. 目前版本，针对文件中有注释，也能够识别注释中的xml格式，进行格式化。
 
 目前存在的问题：
-1. 如上图格式化后的图片所示，文件内容每一行前面会多出一个空格，后续会进行改进。
+1. **如上图格式化后的图片所示，文件内容每一行前面会多出一个空格，后续会进行改进。**不过自己也能解决，全选内容，然后按`shift`+`tab`键，就可以去掉前面的空格。
 
 
 

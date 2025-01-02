@@ -51,7 +51,9 @@ name="base_link">
 后续如果有需要，可以增加其他格式，比如`.sdf`文件格式。
 
 ## 如何使用
-1. 在vscode插件页面，搜索`urdf-formatting`，下载。
+1. 安装，目前有两种方式进行安装。
+- **在vscode插件页面，搜索`urdf-formatting`，下载。**
+- **在该仓库的Release中下载.vsix文件，然后在VSCode的右上角扩展中选择“从VISX安装”，选择下载的.vsix文件进行安装。**
 2. 注意，要使用这款插件，首先确定你要格式化的文件的语言模式是XML，否则，右键不会出现`urdfFormatting`选项。
 
 ![确保文件的语言模式是XML](source/image.png)

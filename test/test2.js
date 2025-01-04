@@ -14,6 +14,12 @@ const fs = require('fs');
 //     return result;
 // }
 
+/**
+ * 将多行文本合并成一行，并用"\\n"表示换行符
+ *
+ * @param text 多行文本
+ * @returns 合并后的单行文本，换行符用"\\n"表示
+ */
 function mergeLinesToSingleLine(text) {
     let result = text.split('\n').join('\\n');
 
@@ -23,38 +29,38 @@ function removeWhitespace(text) {
     return text.replace(/\\n\s+/g, ' ');
   }
   
-  function extractAndReplaceContentInTags(text) {
-    let stack = [];
-    let result = "";
-    let i = 0;
-  
-    while (i < text.length) {
-        if (text[i] === '<') {
-            stack.push(i);
-        } else if (text[i] === '>') {
-            if (stack.length > 0) {
-                let start = stack.pop();
-                if (stack.length === 0) {
-                    let content = text.substring(start + 1, i);
-                    console.log("Content为：",content);
-                    let newContent = removeWhitespace(content);
-                    console.log("newContent为：", newContent);
-                    result += "<" + newContent + ">";
-                } else {
-                    result += text.substring(start, i + 1);
-                }
-            } else {
-                result += text[i];
-            }
-        } else {
-            if (stack.length === 0) {
-                result += text[i];
-            }
-        }
-        i++;
-    }
-    return result;
+function extractAndReplaceContentInTags(text) {
+  let stack = [];
+  let result = "";
+  let i = 0;
+
+  while (i < text.length) {
+      if (text[i] === '<') {
+          stack.push(i);
+      } else if (text[i] === '>') {
+          if (stack.length > 0) {
+              let start = stack.pop();
+              if (stack.length === 0) {
+                  let content = text.substring(start + 1, i);
+                  console.log("Content为：",content);
+                  let newContent = removeWhitespace(content);
+                  console.log("newContent为：", newContent);
+                  result += "<" + newContent + ">";
+              } else {
+                  result += text.substring(start, i + 1);
+              }
+          } else {
+              result += text[i];
+          }
+      } else {
+          if (stack.length === 0) {
+              result += text[i];
+          }
+      }
+      i++;
   }
+  return result;
+}
 // 示例调用
 let inputText = `
 <link name="car_base_link">

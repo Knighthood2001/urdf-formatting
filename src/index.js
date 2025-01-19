@@ -43,6 +43,12 @@ function formatting(text) {
 }
 
 // 处理注释内容，格式化注释部分的内容
+/**
+ * 处理XML注释的函数
+ *
+ * @param text 输入的文本内容
+ * @returns 处理后的文本内容
+ */
 function commentHandle(text) {
     let result = '';
     let i = 0;
@@ -117,6 +123,13 @@ function textHandle(text) {
 }
 
 // XML格式化函数
+/**
+ * 对 XML 文件进行格式化处理，并将结果保存到指定路径。
+ *
+ * @param inputPath 输入的 XML 文件路径。
+ * @param outputPath 输出的格式化后的 XML 文件路径。
+ * @throws 如果在读取或写入文件时发生错误，将抛出异常。
+ */
 function xmlFormatting_file(inputPath, outputPath) {
     const fs = require('fs');
     fs.readFile(inputPath, 'utf8', (err, data) => {
@@ -137,6 +150,12 @@ function xmlFormatting_file(inputPath, outputPath) {
     });
 }
 
+/**
+ * 对给定的XML文本进行格式化处理。
+ *
+ * @param {string} text - 待格式化的XML文本。
+ * @returns {string} 格式化后的XML文本。
+ */
 function xmlFormatting(text) {
     // 处理注释
     let textWithFormattedComments = commentHandle(text);

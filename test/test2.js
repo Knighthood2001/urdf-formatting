@@ -84,7 +84,7 @@ let inputText = `
       rpy="0 0 0" />
     <geometry>
       <mesh
-        filename="package://wd581_ros/meshes/car_base_link.STL" />
+        filename="package://meshes/car_base_link.STL" />
     </geometry>
     <material
       name="">
@@ -98,7 +98,7 @@ let inputText = `
       rpy="0 0 0" />
     <geometry>
       <mesh
-        filename="package://wd581_ros/meshes/car_base_link.STL" />
+        filename="package://meshes/car_base_link.STL" />
     </geometry>
   </collision>
 </link>
